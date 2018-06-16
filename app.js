@@ -49,7 +49,7 @@ app.get('/api/contacts/:id', (req, res) => {
 
 
 app.post('/api/contacts/addcontact', (req, res) => {
-   
+
 
     // creates an instance of Contace with properties 
     let contact = new Contact({
@@ -72,7 +72,7 @@ app.put('/api/contacts/updatecontact/:id', (req, res) => {
     const id = req.params.id;
     console.log("###id is", id);
     console.log(JSON.stringify(req.body));
-   
+
     const updatedContact = Contact.where({ _id: id });
     updatedContact.update({
         $set: {
